@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const VsCodeFileStructure = ({ data }) => {
+const VsCodeFileStructure = ({ data, handleInsertNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showInput, setShowInput] = useState({
     visible: false,
@@ -33,6 +33,8 @@ const VsCodeFileStructure = ({ data }) => {
 
   const addFolder = (e) => {
     if (e.keyCode === 13 && e.target.value) {
+      // Logic to add the
+      handleInsertNode(data.id, showInput.isFolder, e.target.value);
       setShowInput({ ...showInput, visible: false });
     }
   };
@@ -93,7 +95,10 @@ const VsCodeFileStructure = ({ data }) => {
         data?.items?.length > 0 &&
         data?.items?.map((child, index) => (
           <div style={{ marginLeft: "20px" }}>
-            <VsCodeFileStructure data={child} />
+            <VsCodeFileStructure
+              data={child}
+              handleInsertNode={handleInsertNode}
+            />
           </div>
         ))}
     </>
