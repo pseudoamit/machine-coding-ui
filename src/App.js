@@ -5,6 +5,7 @@ import FileLists from "./lld/fileExplorer/FileLists";
 import InfiniteScroll from "./lld/infiniteScroll/infiniteScroll";
 import VsCodeFileStructure from "./lld/vsCodeStructure/VsCodeFileStructure";
 import { vsCodeMockStructure } from "./mock/vsCode.mock";
+import MultiForm from "./lld/multiTabForm/multi-form";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
@@ -19,10 +20,11 @@ function App() {
       {/* <AccordionList /> */}
       {/* <InfiniteScroll /> */}
       {/* <FileLists /> */}
-      <VsCodeFileStructure
+      {/* <VsCodeFileStructure
         data={explorerData}
         handleInsertNode={handleInsertNode}
-      />
+      /> */}
+      <MultiForm />
     </>
   );
 }
