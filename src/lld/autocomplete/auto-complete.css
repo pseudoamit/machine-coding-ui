@@ -1,0 +1,13 @@
+.search-wrapper {
+  height: 8rem;
+  overflow-y: auto;
+}
+
+.search-wrapper li {
+  background-color: #f0ecec;
+  cursor: pointer;
+}
+
+.search-wrapper li:hover {
+  background-color: #b2e0e2;
+}
