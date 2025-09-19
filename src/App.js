@@ -7,6 +7,7 @@ import VsCodeFileStructure from "./lld/vsCodeStructure/VsCodeFileStructure";
 import { vsCodeMockStructure } from "./mock/vsCode.mock";
 import MultiForm from "./lld/multiTabForm/multi-form";
 import AutoComplete from "./lld/autocomplete/auto-complete";
+import ProgressBar from "./lld/progressBar/progressBar";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
@@ -26,7 +27,8 @@ function App() {
         handleInsertNode={handleInsertNode}
       /> */}
       {/* <MultiForm /> */}
-      <AutoComplete />
+      {/* <AutoComplete /> */}
+      <ProgressBar />
     </>
   );
 }
