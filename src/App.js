@@ -8,6 +8,7 @@ import { vsCodeMockStructure } from "./mock/vsCode.mock";
 import MultiForm from "./lld/multiTabForm/multi-form";
 import AutoComplete from "./lld/autocomplete/auto-complete";
 import ProgressBar from "./lld/progressBar/progressBar";
+import StarRating from "./lld/start-rating-component/starRating";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
@@ -28,7 +29,8 @@ function App() {
       /> */}
       {/* <MultiForm /> */}
       {/* <AutoComplete /> */}
-      <ProgressBar />
+      {/* <ProgressBar /> */}
+      <StarRating />
     </>
   );
 }
