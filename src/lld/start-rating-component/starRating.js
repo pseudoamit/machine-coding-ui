@@ -1,42 +1,42 @@
 import { useState } from "react";
+import "./styles.css";
 
-export default function StarRating() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+export default function App() {
   const [hoverIndex, setHoverIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
+  // If the index is already selected which you clicked means you want to deselect it, so setting the previous index of the selected one
   const handleStarClick = (index) => {
     if (selectedIndex === index + 1) {
-      setSelectedIndex(0); // toggle off if same star is clicked
+      setSelectedIndex(index);
     } else {
       setSelectedIndex(index + 1);
     }
   };
 
-  const handleStarEnter = (index) => {
-    setHoverIndex(index + 1); // temporary preview
+  //on mouse enter
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index + 1);
   };
 
-  const handleStarLeave = () => {
-    setHoverIndex(0); // reset preview when mouse leaves
+  // on mouse leave
+  const handleMouseLeave = () => {
+    setHoverIndex(0);
   };
 
   return (
     <div className="App">
       {new Array(10).fill(0).map((_, index) => {
-        const isFilled =
-          hoverIndex > 0
-            ? index < hoverIndex // show hover preview
-            : index < selectedIndex; // fallback to selected value
+        const isEnabled =
+          hoverIndex > 0 ? index < hoverIndex : index < selectedIndex;
 
         return (
           <span
-            key={index}
             onClick={() => handleStarClick(index)}
-            onMouseEnter={() => handleStarEnter(index)}
-            onMouseLeave={handleStarLeave}
-            style={{ fontSize: "24px", cursor: "pointer" }}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
-            {isFilled ? "★" : "☆"}
+            {isEnabled ? "★" : "☆"}
           </span>
         );
       })}
