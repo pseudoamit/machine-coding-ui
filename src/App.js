@@ -9,6 +9,8 @@ import MultiForm from "./lld/multiTabForm/multi-form";
 import AutoComplete from "./lld/autocomplete/auto-complete";
 import ProgressBar from "./lld/progressBar/progressBar";
 import StarRating from "./lld/start-rating-component/starRating";
+import CommentList from "./lld/nestedComment/CommentList";
+import { commentList } from "./mock/commentList.mock";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
@@ -30,7 +32,8 @@ function App() {
       {/* <MultiForm /> */}
       {/* <AutoComplete /> */}
       {/* <ProgressBar /> */}
-      <StarRating />
+      {/* <StarRating /> */}
+      <CommentList commentList={commentList} />
     </>
   );
 }
