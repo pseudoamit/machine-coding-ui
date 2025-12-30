@@ -11,6 +11,12 @@ import ProgressBar from "./lld/progressBar/progressBar";
 import StarRating from "./lld/start-rating-component/starRating";
 import CommentList from "./lld/nestedComment/CommentList";
 import { commentList } from "./mock/commentList.mock";
+import ProductList from "./lld/infinite-scroll-intersection-observer/productList";
+import StartResetPauseTimer from "./lld/timer/startResetPauseTimer";
+import CounterReset from "./lld/timer/counterReset";
+import TimerNto0 from "./lld/timer/timerNto0";
+// import ProductList from "./lld/product-list-fetching/ProductList";
+import StartResetPauseTimerUsingHook from "./lld/timer/startResetPauseTimerUsingHook";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
@@ -33,7 +39,14 @@ function App() {
       {/* <AutoComplete /> */}
       {/* <ProgressBar /> */}
       {/* <StarRating /> */}
-      <CommentList commentList={commentList} />
+      {/* <CommentList commentList={commentList} /> */}
+      {/* <ProductList /> */}
+      {/* <ProductList /> */}
+
+      {/* <StartResetPauseTimer /> */}
+      {/* <CounterReset /> */}
+      {/* <TimerNto0 /> */}
+      <StartResetPauseTimerUsingHook />
     </>
   );
 }
