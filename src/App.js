@@ -17,15 +17,23 @@ import CounterReset from "./lld/timer/counterReset";
 import TimerNto0 from "./lld/timer/timerNto0";
 // import ProductList from "./lld/product-list-fetching/ProductList";
 import StartResetPauseTimerUsingHook from "./lld/timer/startResetPauseTimerUsingHook";
+import VirtualizedList from "./lld/virtualization/virtualizedList";
+import Modal from "./lld/modal/Modal";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
   const { insertNode } = useTraverseTree();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInsertNode = (newFolderId, isFolder, itemName) => {
     const finalTree = insertNode(newFolderId, explorerData, isFolder, itemName);
     setExplorerData(finalTree);
   };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       {/* <AccordionList /> */}
@@ -46,7 +54,10 @@ function App() {
       {/* <StartResetPauseTimer /> */}
       {/* <CounterReset /> */}
       {/* <TimerNto0 /> */}
-      <StartResetPauseTimerUsingHook />
+      {/* <StartResetPauseTimerUsingHook /> */}
+      {/* <VirtualizedList /> */}
+      <button onClick={() => setIsModalOpen(true)}>Show Modal</button>
+      <Modal isOpen={isModalOpen} closeModal={handleCloseModal} />
     </>
   );
 }
