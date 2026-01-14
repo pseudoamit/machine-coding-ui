@@ -1,0 +1,45 @@
+.toaster-container {
+  width: 18rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px;
+  color: #fff;
+  position: fixed;
+}
+
+.success {
+  background-color: green;
+}
+
+.info {
+  background-color: blue;
+}
+
+.warning {
+  background-color: orange;
+}
+
+.error {
+  background-color: red;
+}
+
+.top-left {
+  top: 100px;
+  left: 100px;
+}
+
+.top-right {
+  top: 100px;
+  right: 100px;
+}
+
+.bottom-left {
+  bottom: 100px;
+  left: 100px;
+}
+
+.bottom-right {
+  bottom: 100px;
+  right: 100px;
+}

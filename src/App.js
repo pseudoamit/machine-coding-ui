@@ -15,10 +15,11 @@ import ProductList from "./lld/infinite-scroll-intersection-observer/productList
 import StartResetPauseTimer from "./lld/timer/startResetPauseTimer";
 import CounterReset from "./lld/timer/counterReset";
 import TimerNto0 from "./lld/timer/timerNto0";
-// import ProductList from "./lld/product-list-fetching/ProductList";
+import { ProductList as ProductFetch } from "./lld/product-list-fetching/ProductList";
 import StartResetPauseTimerUsingHook from "./lld/timer/startResetPauseTimerUsingHook";
 import VirtualizedList from "./lld/virtualization/virtualizedList";
 import Modal from "./lld/modal/Modal";
+import Notification from "./lld/notification/Notification";
 
 function App() {
   const [explorerData, setExplorerData] = useState(vsCodeMockStructure);
@@ -56,8 +57,9 @@ function App() {
       {/* <TimerNto0 /> */}
       {/* <StartResetPauseTimerUsingHook /> */}
       {/* <VirtualizedList /> */}
-      <button onClick={() => setIsModalOpen(true)}>Show Modal</button>
-      <Modal isOpen={isModalOpen} closeModal={handleCloseModal} />
+      {/* <button onClick={() => setIsModalOpen(true)}>Show Modal</button>
+      <Modal isOpen={isModalOpen} closeModal={handleCloseModal} /> */}
+      <Notification />
     </>
   );
 }
