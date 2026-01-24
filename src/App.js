@@ -59,7 +59,7 @@ function App() {
       {/* <VirtualizedList /> */}
       {/* <button onClick={() => setIsModalOpen(true)}>Show Modal</button>
       <Modal isOpen={isModalOpen} closeModal={handleCloseModal} /> */}
-      <Notification />
+      {/* <Notification /> */}
     </>
   );
 }
