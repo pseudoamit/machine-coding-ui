@@ -152,7 +152,7 @@ export default function MultiForm() {
 
     if (tabName === "interest") {
       const hobbiesSelected = newFormData.interest.hobbies.options.some(
-        (opt) => opt.isSelected
+        (opt) => opt.isSelected,
       );
       if (!hobbiesSelected) {
         newFormData.interest.hobbies.error = {
@@ -165,7 +165,7 @@ export default function MultiForm() {
       }
 
       const languageSelected = newFormData.interest.language.options.some(
-        (opt) => opt.isSelected
+        (opt) => opt.isSelected,
       );
       if (!languageSelected) {
         newFormData.interest.language.error = {
